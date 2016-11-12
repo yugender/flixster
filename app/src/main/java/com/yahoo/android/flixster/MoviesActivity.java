@@ -57,13 +57,6 @@ public class MoviesActivity extends AppCompatActivity {
 
     }
 
-    private void launchVideoPlayActivity(Movie movie) {
-        Intent i = new Intent(MoviesActivity.this, VideoPlayActivity.class);
-        i.putExtra("movie", movie);
-        // brings up the second activity
-        startActivity(i);
-    }
-
     private void getMoviesData() {
         Request request = new Request.Builder().url(NOW_PLAYING_API_URL).build();
         client.newCall(request).enqueue(new NetworkRequestCallback(false));
