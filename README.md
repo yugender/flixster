@@ -1,0 +1,2 @@
+# flixster
+Sample Movies app
